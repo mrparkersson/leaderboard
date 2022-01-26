@@ -1,3 +1,101 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: bisque;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(201, 186, 186);
+  color: #fff;
+}
+
+button {
+  border: 2px solid #fff;
+  padding: 5px 15px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 0;
+  text-align: left;
+}
+
+.refresh {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.list ul {
+  border: 2px solid #fff;
+  margin: 20px 0;
+}
+
+.list li {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 40px;
+}
+
+.list li:nth-child(1),
+.list li:nth-child(2),
+.list li:nth-child(3) {
+  padding-left: 10px;
+}
+
+.list li:nth-child(even) {
+  background-color: #333;
+}
+
+.list li svg {
+  width: 20px;
+}
+
+.list li:nth-child(1) svg {
+  color: rgb(233, 161, 27);
+}
+
+.list li:nth-child(2) svg {
+  color: rgb(136, 136, 136);
+}
+
+.list li:nth-child(3) svg {
+  color: rgb(128, 67, 49);
+}
+
+.form form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.form input {
+  width: 100%;
+  border: 2px solid #fff;
+  padding: 5px;
+  background-color: transparent;
 }

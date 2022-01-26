@@ -2,36 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaderboard</title>
   </head>
-
   <body>
     <h1>Leaderboard</h1>
     <div class="container">
-      <article>
-        <div class="refresh-scores">
+      <section class="list">
+        <div class="refresh">
           <h2>Recent scores</h2>
-          <button type="button" id="refresh-btn">Refresh</button>
+          <button>Refresh</button>
         </div>
-        <div>
-          <div id="scores"></div>
-        </div>
-      </article>
-      <article class="add-score">
+        <ul>
+          <li>NO SCORES YET</li>
+        </ul>
+      </section>
+      <section class="form">
         <h2>Add your score</h2>
-        <div class="input-scores">
-          <input id="username" placeholder="Your name" required />
-          <input id="user-score" placeholder="Your score" required />
-          <input class="submit" id="submit" type="submit" value="Submit" />
-        </div>
-      </article>
+        <form>
+          <input type="text" id="username" required />
+          <input type="number" id="score" required />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
     </div>
-    <footer>
-      <div>
-        <p>Copyright Prince Parker</p>
-      </div>
-    </footer>
   </body>
 </html>
