@@ -1,13 +1,26 @@
-import _ from 'lodash';
 import './style.css';
 
-function component() {
-  const element = document.createElement('div');
+import { getScore, postScore } from './api.js';
+import renderList from './render.js';
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const refreshBtn = document.querySelector('.refresh button');
+const form = document.querySelector('form');
 
-  return element;
-}
+refreshBtn.addEventListener('click', async () => {
+  const list = await getScore();
 
-document.body.appendChild(component());
+  renderList(list);
+});
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const score = {
+    user: form.elements.username.value.trim(),
+    score: form.elements.score.value.trim(),
+  };
+
+  form.reset();
+
+  await postScore(score);
+});
