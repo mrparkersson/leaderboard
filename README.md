@@ -61,8 +61,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Inspiration: Microverse
+- Inspiration: Microverse(https://www.microverse.org)
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/microverseinc/readme-template/blob/master/MIT.md) licensed.
